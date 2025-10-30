@@ -27,9 +27,3 @@
 ### 🐍 Snake Animation
 ![snake gif](https://github.com/Sahnurii/Sahnurii/blob/output/snake.svg)
 
-### 👾 Pacman Metrics
-![Metrics](https://github.com/Sahnurii/Sahnurii/blob/main/github-metrics.svg)
-
-### 📊 Classic Metrics
-![Classic Metrics](https://github.com/Sahnurii/Sahnurii/blob/main/github-metrics-classic.svg)
-

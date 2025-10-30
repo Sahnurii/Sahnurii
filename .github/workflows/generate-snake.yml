@@ -2,33 +2,31 @@ name: Generate Snake Game
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # jalan tiap hari jam 00:00 UTC
   workflow_dispatch:
   push:
     branches: [main]
 
 jobs:
   build:
+    name: generate snake.svg
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # penting agar bisa push ke branch output
+      contents: write  # WAJIB supaya bisa push ke branch output
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Generate Snake Game
-        uses: Platane/snk@v3
+      - name: Generate Snake Animation
+        uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: Sahnurii
-          output: dist/snake.svg  # ubah jadi output (singular)
+          github_user_name: Sahnurii   # Ganti dengan username kamu
+          outputs: dist/snake.svg      # boleh pakai 'outputs' versi terbaru
 
-      - name: Create output folder
-        run: mkdir -p dist
-
-      - name: Push Snake to Output Branch
+      - name: Push Snake to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: output
-          build_dir: dist
+          target_branch: output        # nama branch hasil animasi
+          build_dir: dist              # folder hasil render
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

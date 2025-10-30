@@ -1,4 +1,4 @@
-name: Metrics Pacman Mode
+name: Metrics
 
 on:
   schedule: [{cron: "0 6 * * *"}]
@@ -7,6 +7,8 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
@@ -14,7 +16,8 @@ jobs:
           user: Sahnurii
           template: classic
           base: header, activity, community, repositories, metadata
-          plugin_games: yes
-          plugin_games_limit: 5
-          plugin_games_mode: pacman
-          plugin_games_token: NOT_NEEDED
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+          plugin_languages: yes
+          plugin_languages_ignored: html, css
+          plugin_languages_limit: 6

@@ -22,3 +22,14 @@
 [![](https://visitcount.itsvg.in/api?id=Sahnurii&icon=2&color=13)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+
+
+### 🐍 Snake Animation
+![snake gif](https://github.com/Sahnurii/Sahnurii/blob/output/snake.svg)
+
+### 👾 Pacman Metrics
+![Metrics](https://github.com/Sahnurii/Sahnurii/blob/main/github-metrics.svg)
+
+### 📊 Classic Metrics
+![Classic Metrics](https://github.com/Sahnurii/Sahnurii/blob/main/github-metrics-classic.svg)
+

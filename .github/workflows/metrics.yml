@@ -1,0 +1,20 @@
+name: Metrics Pacman Mode
+
+on:
+  schedule: [{cron: "0 6 * * *"}]
+  workflow_dispatch:
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: Sahnurii
+          template: classic
+          base: header, activity, community, repositories, metadata
+          plugin_games: yes
+          plugin_games_limit: 5
+          plugin_games_mode: pacman
+          plugin_games_token: NOT_NEEDED
